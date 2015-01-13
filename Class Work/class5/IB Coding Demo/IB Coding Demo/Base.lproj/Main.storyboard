@@ -27,6 +27,9 @@
                                 <state key="normal" title="Calculate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="168" y="193" width="65" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="changeLabel:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Gwz-9S-JLQ"/>
                                 </connections>
@@ -39,8 +42,27 @@
                                     <rect key="frame" x="84" y="93" width="271" height="30"/>
                                 </variation>
                             </textField>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="05y-yc-jmk">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="141" y="326" width="118" height="31"/>
+                                </variation>
+                                <connections>
+                                    <action selector="changeLabelOnDrag:" destination="vXZ-lx-hvc" eventType="valueChanged" id="goZ-S8-s4I"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="05y-yc-jmk"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="05y-yc-jmk"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="nameLabel" destination="XYW-l0-YxK" id="Gl4-3d-PqI"/>
