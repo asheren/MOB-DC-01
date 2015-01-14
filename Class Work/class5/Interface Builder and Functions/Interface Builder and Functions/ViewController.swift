@@ -42,8 +42,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var labelName: UILabel!
     @IBAction func fibNumberButton(sender: AnyObject) {
-        let Int = Int(labelName.Int)
-        labelName.int = "\(fibNum)"
+        //this line gives you an integer that is in the form of a struct (numbers) and you wnt the textfield here because that's where you're entering the information in.
+        let int = textField.text.toInt()
+        //calls fib which is the function from above and then the ! after int unwraps it from the struct to let you put in a number
+        let fibNum = fib(int!)
+        labelName.text = "\(fibNum)"
     }
     /*
     TODO: Drag a new text field into the view controller, and create an outlet for it here. Make both text fields use the numeric keypad. One text field represents an optional tip percentage (in integer form, e.g 20 = 20% tip), the other represents the total amount of a bill. When the button is pressed, make the label display both the total amount and tip amount (e.g. "total: $100, tip: $15"). Call an instructor/TA when you're done with this task.
