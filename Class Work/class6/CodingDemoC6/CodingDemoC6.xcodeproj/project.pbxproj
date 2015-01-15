@@ -38,6 +38,8 @@
 		82A830A11A673ABB0014C1CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82A830A21A673ABB0014C1CE /* CodingDemoC6Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingDemoC6Tests.swift; sourceTree = "<group>"; };
 		82A830AC1A673B2A0014C1CE /* Animal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
+		82A830AE1A674FC50014C1CE /* classes_example.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = classes_example.playground; sourceTree = "<group>"; };
+		82A830AF1A6755E70014C1CE /* classes_example2.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = classes_example2.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,8 @@
 				82A830951A673ABB0014C1CE /* LaunchScreen.xib */,
 				82A8308A1A673ABB0014C1CE /* Supporting Files */,
 				82A830AC1A673B2A0014C1CE /* Animal.swift */,
+				82A830AE1A674FC50014C1CE /* classes_example.playground */,
+				82A830AF1A6755E70014C1CE /* classes_example2.playground */,
 			);
 			path = CodingDemoC6;
 			sourceTree = "<group>";
