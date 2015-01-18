@@ -13,6 +13,7 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var numberSumTotal: UILabel!
     
     @IBAction func addActionButton(sender: AnyObject) {
+        //I think this would work if I could figure out the last part of how to unwrap an int.
         let current = numberInput.text.toInt()
         let value = numberSumTotal.text.toInt()
         

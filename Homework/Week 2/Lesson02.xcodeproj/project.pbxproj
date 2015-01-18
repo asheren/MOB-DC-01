@@ -16,6 +16,7 @@
 		5D06C6D119D8D73C0082F2DE /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D06C6D019D8D73C0082F2DE /* ThirdViewController.swift */; };
 		5D06C6D319D8D7420082F2DE /* FourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D06C6D219D8D7420082F2DE /* FourthViewController.swift */; };
 		82C5197D1A6C3F5A00120131 /* NameandAge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5197C1A6C3F5A00120131 /* NameandAge.swift */; };
+		82C5197F1A6C670F00120131 /* FibonacciAdder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82C5197E1A6C670F00120131 /* FibonacciAdder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		5D06C6D019D8D73C0082F2DE /* ThirdViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 		5D06C6D219D8D7420082F2DE /* FourthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FourthViewController.swift; sourceTree = "<group>"; };
 		82C5197C1A6C3F5A00120131 /* NameandAge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NameandAge.swift; sourceTree = "<group>"; };
+		82C5197E1A6C670F00120131 /* FibonacciAdder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FibonacciAdder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +91,7 @@
 				5D06C6B019D8D2710082F2DE /* Main.storyboard */,
 				5D06C6AA19D8D2710082F2DE /* Supporting Files */,
 				82C5197C1A6C3F5A00120131 /* NameandAge.swift */,
+				82C5197E1A6C670F00120131 /* FibonacciAdder.swift */,
 			);
 			path = Lesson02;
 			sourceTree = "<group>";
@@ -234,6 +237,7 @@
 				5D06C6CD19D8D72E0082F2DE /* FirstViewController.swift in Sources */,
 				5D06C6D119D8D73C0082F2DE /* ThirdViewController.swift in Sources */,
 				5D06C6AD19D8D2710082F2DE /* AppDelegate.swift in Sources */,
+				82C5197F1A6C670F00120131 /* FibonacciAdder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
