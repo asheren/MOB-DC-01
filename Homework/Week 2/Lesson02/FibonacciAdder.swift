@@ -11,12 +11,13 @@ import Foundation
 class FibonacciAdder {
 
     func fibonacciNumberAtIndex(indexOfFibonacciNumber: Int) {
+        //pretty sure having 9 in there isn't correct, thought it might be n but that was erroring out because n wasn't set to anything
         var fibNum = 9, current = 0, next = 1, result = 0
         for index in 0..<fibNum {
-            let tempVar = current
+            let tempNum = current
             current = next
-            next = tempVar + current
-            result = tempVar
+            next = tempNum + current
+            result = tempNum
         }
         println("Fib num is \(result)")
         

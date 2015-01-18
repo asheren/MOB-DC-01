@@ -47,7 +47,6 @@ class FirstViewController: UIViewController {
     
     @IBAction func specificDrinkAndDriveButton(sender: AnyObject) {
         var myNameandAge = NameandAge()
-        //need to then unwrap the int cause i'm getting a nil optional error
         myNameandAge.age = ageTextField.text.toInt()!
         
         if myNameandAge.age > 21 {

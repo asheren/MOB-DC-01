@@ -14,10 +14,10 @@ class SecondViewController: UIViewController {
     
     @IBAction func addActionButton(sender: AnyObject) {
         //I think this would work if I could figure out the last part of how to unwrap an int.
-        let current = numberInput.text.toInt()
-        let value = numberSumTotal.text.toInt()
+        let current = numberInput.text.toInt()!
+        let value = numberSumTotal
         
-        return current + value
+      //  return current + current
     }
     //TODO five: Display the cumulative sum of all numbers added every time the ‘add’ button is pressed. Hook up the label, text box and button to make this work.
 }
