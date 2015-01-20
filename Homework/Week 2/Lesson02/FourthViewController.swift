@@ -14,8 +14,8 @@ class FourthViewController: UIViewController {
     @IBOutlet weak var printFibNumLabel: UILabel!
     @IBAction func calculateButton(sender: AnyObject) {
         var fibNum = FibonacciAdder()
-     //   fibNum.fibonacciNumberAtIndex(indexOfFibonacciNumber) = numberInputTextField.text
-     //   printFibNumLabel.text = fibNum.fibonacciNumberAtIndex(indexOfFibonacciNumber)
+        fibNum.fibonacciNumberAtIndex(indexOfFibonacciNumber) = numberInputTextField.text
+        printFibNumLabel.text = fibNum.fibonacciNumberAtIndex(indexOfFibonacciNumber)
     }
 /*
     TODO seven: Hook up the text input box, label and and a ‘calculate’ button. Create a ‘fibonacci adder’ class with a method ‘fibonacciNumberAtIndex' which takes indexOfFibonacciNumber (an integer).  When the button is pressed, create an instance of that class, call the method, and print out the appropriate fibonacci number of an inputted integer.

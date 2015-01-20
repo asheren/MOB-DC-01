@@ -12,7 +12,7 @@ class FibonacciAdder {
 
     func fibonacciNumberAtIndex(indexOfFibonacciNumber: Int) {
         //pretty sure having 9 in there isn't correct, thought it might be n but that was erroring out because n wasn't set to anything
-        var fibNum = 9, current = 0, next = 1, result = 0
+        var fibNum = n, current = 0, next = 1, result = 0
         for index in 0..<fibNum {
             let tempNum = current
             current = next

@@ -21,8 +21,12 @@ class FirstViewController: UIViewController {
     @IBAction func nameAndAgeOutputButton(sender: AnyObject) {
         var myNameandAge = NameandAge()
         myNameandAge.name = nameTextField.text
-        myNameandAge.age = ageTextField.text.toInt()!
-        textLabel.text = myNameandAge.stringrepresentation()
+        let tempAge = ageTextField.text.toInt()
+        
+        if tempAge != nil {
+            myNameandAge.age = ageTextField.text.toInt()!
+            textLabel.text = myNameandAge.stringrepresentation()
+        }
     }
     /*
     TODO two: Connect the ‘name’ and ‘age’ text boxes to this class. Hook up the button to a NEW function (in addition to the function previously defined). That function must look at the string entered in the text box and print out “Hello {name}, you are {age} years old!”
@@ -30,7 +34,12 @@ class FirstViewController: UIViewController {
     
     @IBAction func drinkAndDriveButton(sender: AnyObject) {
         var myNameandAge = NameandAge()
-        myNameandAge.age = ageTextField.text.toInt()!
+        let tempAge = ageTextField.text.toInt()
+        
+        if tempAge != nil {
+            myNameandAge.age = ageTextField.text.toInt()!
+            textLabel.text = myNameandAge.stringrepresentation()
+        }
         
         if myNameandAge.age > 21 {
             println("You can drink")
@@ -47,7 +56,12 @@ class FirstViewController: UIViewController {
     
     @IBAction func specificDrinkAndDriveButton(sender: AnyObject) {
         var myNameandAge = NameandAge()
-        myNameandAge.age = ageTextField.text.toInt()!
+        let tempAge = ageTextField.text.toInt()
+        
+        if tempAge != nil {
+            myNameandAge.age = ageTextField.text.toInt()!
+            textLabel.text = myNameandAge.stringrepresentation()
+        }
         
         if myNameandAge.age > 21 {
             println("You can drive, vote and drink (but not at the same time!)")
