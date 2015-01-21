@@ -14,7 +14,8 @@ class FourthViewController: UIViewController {
     @IBOutlet weak var printFibNumLabel: UILabel!
     @IBAction func calculateButton(sender: AnyObject) {
         var fibNum = FibonacciAdder()
-        fibNum.fibonacciNumberAtIndex(indexOfFibonacciNumber) = numberInputTextField.text
+        let indexOfFibonacciNumber = numberInputTextField.text.toInt()!
+        fibNum.fibonacciNumberAtIndex(indexOfFibonacciNumber)
         printFibNumLabel.text = fibNum.fibonacciNumberAtIndex(indexOfFibonacciNumber)
     }
 /*

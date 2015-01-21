@@ -150,6 +150,12 @@
                                     <action selector="addActionButton:" destination="DXI-gN-4Tg" eventType="touchUpInside" id="as3-l1-NpI"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Error" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1q7-Ia-nhj">
+                                <rect key="frame" x="111" y="261" width="268" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -169,6 +175,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="errorMessage" destination="1q7-Ia-nhj" id="BJC-7r-DsG"/>
                         <outlet property="numberInput" destination="dsS-73-FSq" id="LeV-1g-844"/>
                         <outlet property="numberSumTotal" destination="qiz-6d-s2d" id="bLM-Bo-7lB"/>
                     </connections>
