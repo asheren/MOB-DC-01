@@ -23,7 +23,7 @@ class CardGame: BlackJack {
     func firstHand -> Int {
         let rand1 = Int(arc4random(12))
         let rand2 = Int(arc4random(12))
-        return rand1 + rand2
+        return total = rand1 + rand2
     }
     
     func CPU -> Int {

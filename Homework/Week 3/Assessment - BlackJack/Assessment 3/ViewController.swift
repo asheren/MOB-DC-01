@@ -31,6 +31,17 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
     }
+    @IBAction func greenBox(sender: AnyObject) {
+        //self.newCard = Int(arc4random(12)
+        updatedTotal = newCard + total
+        
+        if { updatedTotal > 21
+            println ("Game over, you lose!")
+            //disable tap gesture
+        }
+    }
+    
+    
 
 
 }
