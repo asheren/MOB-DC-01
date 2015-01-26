@@ -6,6 +6,8 @@
 //  Copyright (c) 2015 Tedi Konda. All rights reserved.
 //
 
+//these are like models. so all the logic should be here and the controller just runs the methods.
+
 import Foundation
 protocol BlackJack {
     var deal: Bool { get set }
