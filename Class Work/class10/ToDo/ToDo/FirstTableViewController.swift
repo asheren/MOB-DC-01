@@ -8,10 +8,20 @@
 
 import UIKit
 
-class FirstTableViewController: UITableViewController {
+class FirstTableViewController: UITableViewController, ToDo {
 
     var toDoList: [String] = ["laundry", "supermarket", "code", "watch tv", "take a walk"]
     
+    func addTaskToArray(taskName: String) {
+        self.toDoList.append(taskName)
+    }
+    
+    @IBAction func addNewTask(sender: AnyObject) {
+       var showVC = self.storyboard?.instantiateViewControllerWithIdentifier("showVC") as ViewController
+        showVC.delegate = self
+        
+        self.presentViewController(showVC, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

@@ -7,7 +7,7 @@
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="showVC" id="vXZ-lx-hvc" customClass="ViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -90,13 +90,17 @@
                         </connections>
                     </tableView>
                     <toolbarItems>
-                        <barButtonItem title="New Task" id="tKn-eK-Z0x"/>
+                        <barButtonItem title="New Task" id="tKn-eK-Z0x">
+                            <connections>
+                                <action selector="addNewTask:" destination="p0k-OI-ZCs" id="CSX-dF-Nae"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aFH-IF-Xm2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1180.5" y="228"/>
+            <point key="canvasLocation" x="972" y="259"/>
         </scene>
     </scenes>
 </document>

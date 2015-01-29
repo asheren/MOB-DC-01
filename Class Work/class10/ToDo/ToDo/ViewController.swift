@@ -8,30 +8,36 @@
 
 import UIKit
 
+protocol ToDo {
+    func addTaskToArray(taskName: String)
+}
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var toDoListItemField: UITextField!
-    var toDoList: [String] = ["laundry", "supermarket", "code", "watch tv", "take a walk"]
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        toDoList.append("relax")
-        
-        for i in toDoList{
-            println(i)
-        }
-    }
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//        // Do any additional setup after loading the view, typically from a nib.
+//     //   toDoList.append(taskName)
+//        
+////        for i in toDoList{
+////            println(i)
+////        }
+//    }
     
+    var delegate: ToDo?
     
     @IBAction func addListItemButton(sender: AnyObject) {
         //to do list item add
-        var task = toDoListItemField.text
-        toDoList.append("/task")
+        self.delegate?.addTaskToArray(toDoListItemField.text)
+        self.dismissViewControllerAnimated(true, completion: nil)
         
-        for toDos in toDoList {
-            println(toDos)
-        }
+        
+        //from previous task
+//        for toDos in toDoList {
+//            println(toDos)
+//        }
     }
 
     override func didReceiveMemoryWarning() {
