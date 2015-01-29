@@ -30,5 +30,21 @@ myArray.insert(100, atIndex: 2)
 myArray.count
 myArray.insert(50, atIndex: myArray.count - 1)
 
+myArray.isEmpty
+
+stringArray.isEmpty
+
+myArray.removeAtIndex(2)
+myArray[1] = 40
+
+
+//to loop through all the numbers
+for i in myArray {
+    if i == 10 {
+        println("Bingo")
+    }else {
+        println(i)
+    }
+}
 
 
