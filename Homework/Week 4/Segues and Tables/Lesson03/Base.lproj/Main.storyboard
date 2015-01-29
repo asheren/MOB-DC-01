@@ -44,6 +44,9 @@
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="119" y="394" width="128" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="displayTableView:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="66f-Ih-iRx"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ffo-Fk-A80">
                                 <rect key="frame" x="154" y="230" width="300" height="150"/>
@@ -61,8 +64,8 @@ It needs to have an image view and a dismiss button that dismisses the modal. Do
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" misplaced="YES">
-                                            <rect key="frame" x="3" y="-2" width="294" height="154"/>
+                                        <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="3" y="0.0" width="294" height="154"/>
                                         </variation>
                                     </label>
                                 </subviews>
@@ -81,7 +84,7 @@ It needs to have an image view and a dismiss button that dismisses the modal. Do
                     <navigationItem key="navigationItem" id="hzY-Hy-RMA"/>
                     <connections>
                         <outlet property="swipeView" destination="ffo-Fk-A80" id="SWt-9Q-yzr"/>
-                        <segue destination="tH5-nV-9zA" kind="show" identifier="show" id="O1F-Kb-DN0"/>
+                        <segue destination="tH5-nV-9zA" kind="show" identifier="showTableView" id="O1F-Kb-DN0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
