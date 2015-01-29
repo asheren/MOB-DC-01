@@ -4,6 +4,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var swipeView: UIView!
     
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initiateModalOnSwipe()
