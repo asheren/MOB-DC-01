@@ -19,6 +19,10 @@ class ViewController: UIViewController {
         var secondVC = self.storyboard?.instantiateViewControllerWithIdentifier("secondVC") as SecondViewController
         self.presentViewController(secondVC, animated: true, completion: nil)
     }
+    
+    func DisplayTableVIew (sender: UITapGestureRecognizer){
+        self.performSegueWithIdentifier("tableview", sender: self)
+    }
       /*
     TODO one: Hook up a swipeable area on the home screen that must present a modal dialog when swiped. You must create the modal dialog and present it in CODE (not the storyboard).
     TODO two: Add an imageview to the modal dialog presented in TODO two.
