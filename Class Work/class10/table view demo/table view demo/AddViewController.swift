@@ -11,7 +11,7 @@ import UIKit
 //protocols are usually nouns and not actions
 protocol Campus {
     //protocol needs a function and we're going to pass in the argument of campus name as a string
-    func addCampus(CampusName: String)
+    func addCampusToArray(campusName: String)
 }
 
 class AddViewController: UIViewController {
@@ -25,7 +25,7 @@ class AddViewController: UIViewController {
     @IBAction func saveAndGoBack(sender: AnyObject) {
         //now referencing the function from the first view controller into this view controller and you're adding the campus from the textbox which is the outlet text field
         
-        self.delegate?.addCampus(addTextBox.text)
+        self.delegate?.addCampusToArray(addTextBox.text)
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     override func viewDidLoad() {

@@ -13,7 +13,7 @@ class TableViewController: UITableViewController, Campus {
     
     var gaCampuses = ["Washington DC", "New York", "Los Angeles", "Hong Kong", "Atlanta"]
     
-    func addCampus(campusName: String) {
+    func addCampusToArray(campusName: String) {
         //in order to add the campus name to that list
         self.gaCampuses.append(campusName)
     }
@@ -21,6 +21,9 @@ class TableViewController: UITableViewController, Campus {
     @IBAction func addCampus(sender: AnyObject) {
         //first need to find the view controller and make sure to put the id of the scene that we're connecting to after the instantiate methods
         var addVC = self.storyboard?.instantiateViewControllerWithIdentifier("addVC") as AddViewController
+        
+        //need to set the delegate from this controller now as well. the delegate we defined is set as self or in our current state
+        addVC.delegate = self
         
         //to hook up the second view controller
         self.presentViewController(addVC, animated: true, completion: nil)
