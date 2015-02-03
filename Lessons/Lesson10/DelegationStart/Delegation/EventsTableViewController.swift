@@ -8,29 +8,43 @@
 
 import UIKit
 
-class EventsTableViewController: UITableViewController {
+class EventsTableViewController: UITableViewController, EventProtocol {
     // event array
     var arrEvents:[Event] = []
+    
+    //add ibaction to this
+    func addEvent(sender: UIBarButtonItem) {
+        let addEventViewController = self.storyboard?.instantiateViewControllerWithIdentifier("addEventVC") as AddEventViewController
+        AddEventViewController.delegate = self
+        let navigationController = UINavigationController(rootViewController: addEventViewController)
+        self. presentViewController(navigationController, animated: true, completion: nil)
+    }
 
 
+    func addEvent(newEvent: Event) {
+        arrEvents.append(newEvent)
+    }
     // MARK: - Table view data source
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return self.arrEvents.count
     }
 
     
-    /*
+   
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
     
     // Configure the cell...
     
+    let currentEvent = self.arrEvents[indexPath.row]
+        cell.textLabel?.text = currentEvent.name
+        cell.detailTextLabel?.text = currentEvent.location
+    
     return cell
     }
-    */
 
 }

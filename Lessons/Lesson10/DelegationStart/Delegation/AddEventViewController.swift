@@ -8,6 +8,9 @@
 
 import UIKit
 
+protocol Event
+    
+
 class AddEventViewController: UIViewController {
 
     @IBOutlet var nameLabel: UITextField!
@@ -21,5 +24,17 @@ class AddEventViewController: UIViewController {
         let saveButton = UIBarButtonItem(title: "Save", style: UIBarButtonItemStyle.Plain, target: self, action: "save")
 
         // set navigation items
+        self.navigationItem.title = "Add Event"
+        self.navigationItem.leftBarButtonItem = cancelButton
+        self.navigationItem.rightBarButtonItem = saveButton
+    }
+    
+    func save() {
+        let newEvent = Event(name: nameLabel.text, location: locationLabel.text
+        dismiss()
+    }
+    
+    func dismiss() {
+        self.dismissViewControllerAnimated(true, completion: nil)
     }
 }
