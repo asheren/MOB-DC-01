@@ -63,6 +63,7 @@
                     </view>
                     <connections>
                         <outlet property="campusesTable" destination="3uo-jN-p5x" id="LYD-D8-3T8"/>
+                        <outlet property="stuffTextField" destination="chL-sB-7PW" id="3vS-R1-3Jc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

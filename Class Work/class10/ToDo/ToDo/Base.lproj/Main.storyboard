@@ -45,6 +45,14 @@
                                     <action selector="addListItemButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HF3-oV-Vpe"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F5j-kf-rfe">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="121" y="222" width="241" height="30"/>
+                                </variation>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -52,6 +60,7 @@
                                 <exclude reference="UyI-Ev-44x"/>
                                 <exclude reference="K01-iX-CCw"/>
                                 <exclude reference="LyQ-XX-buE"/>
+                                <exclude reference="F5j-kf-rfe"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -59,10 +68,12 @@
                                 <include reference="UyI-Ev-44x"/>
                                 <include reference="K01-iX-CCw"/>
                                 <include reference="LyQ-XX-buE"/>
+                                <include reference="F5j-kf-rfe"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="emptyTextFieldMessage" destination="F5j-kf-rfe" id="o8g-0x-mID"/>
                         <outlet property="toDoListItemField" destination="UyI-Ev-44x" id="3Yf-eo-HWE"/>
                     </connections>
                 </viewController>
@@ -74,6 +85,7 @@
             <objects>
                 <tableViewController id="p0k-OI-ZCs" customClass="FirstTableViewController" customModule="ToDo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JgA-UU-lY3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>

@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UITextFieldDelegate {
     var gaCampuses: [String] = []
     
+    @IBOutlet weak var stuffTextField: UITextField!
     @IBOutlet weak var campusesTable: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             println("your table view is empty")
             campusesTable.hidden = true
         }
+        stuffTextField.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
