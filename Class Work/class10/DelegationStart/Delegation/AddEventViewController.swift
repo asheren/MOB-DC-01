@@ -8,13 +8,21 @@
 
 import UIKit
 
+<<<<<<< HEAD
 protocol Event
     
+=======
+protocol EventProtocol {
+    func addEvent(newEvent:Event)
+}
+>>>>>>> 321f50e7312ea2bea9bcd16fde7052897e269cf3
 
 class AddEventViewController: UIViewController {
 
     @IBOutlet var nameLabel: UITextField!
     @IBOutlet var locationLabel: UITextField!
+    
+    var delegate:EventProtocol?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +38,12 @@ class AddEventViewController: UIViewController {
     }
     
     func save() {
+<<<<<<< HEAD
         let newEvent = Event(name: nameLabel.text, location: locationLabel.text
+=======
+        let newEvent = Event(name: nameLabel.text, location: locationLabel.text)
+        self.delegate?.addEvent(newEvent)
+>>>>>>> 321f50e7312ea2bea9bcd16fde7052897e269cf3
         dismiss()
     }
     
