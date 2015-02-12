@@ -5,8 +5,6 @@ class ViewController: UIViewController {
 
     @IBOutlet var head: UIView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -49,16 +47,7 @@ class ViewController: UIViewController {
             multiplier: 1.0,
             constant: self.head.frame.width/4)
         
-        let bodyHeight = NSLayoutConstraint(
-            item: body,
-            attribute: NSLayoutAttribute.Height,
-            relatedBy: NSLayoutRelation.Equal,
-            toItem: self.head,
-            attribute: NSLayoutAttribute.Height,
-            multiplier: 2.0,
-            constant: 0)
-        
-        self.view.addConstraints([bodyWidth, bodyVerticalPosition, bodyHorizontalPosition, bodyHeight])
+        self.view.addConstraints([bodyWidth, bodyVerticalPosition, bodyHorizontalPosition])
         
         var leftArm = UIView()
         body.backgroundColor = UIColor.blackColor()
@@ -119,13 +108,13 @@ class ViewController: UIViewController {
             attribute: NSLayoutAttribute.Height,
             relatedBy: NSLayoutRelation.Equal,
             //laying out the top of the body
-            toItem: nil,
+            toItem: leftArm,
             //starting at the top of the head
             attribute: NSLayoutAttribute.Height,
             multiplier: 1,
             constant: 30)
         
-        let rightArmVerticalPosition = NSLayoutConstraint(
+        let rightArmTop = NSLayoutConstraint(
             item: rightArm,
             attribute: NSLayoutAttribute.Top,
             relatedBy: NSLayoutRelation.Equal,
@@ -152,11 +141,115 @@ class ViewController: UIViewController {
             relatedBy: NSLayoutRelation.Equal,
             //will be body because you're connecting the arm to the body
             toItem: body,
+            attribute: NSLayoutAttribute.Trailing,
+            multiplier: 1,
+            constant: -20)
+        
+        self.view.addConstraints([rightArmHeight, rightArmLeading, rightArmTrailing, rightArmTop])
+        
+        var leftLeg = UIView()
+        leftLeg.backgroundColor = UIColor.blackColor()
+        self.view.addSubview(leftLeg)
+        
+        leftLeg.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        let leftLegHeight = NSLayoutConstraint(
+            item: leftLeg,
+            attribute: NSLayoutAttribute.Height,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: nil,
+            attribute: NSLayoutAttribute.Height,
+            multiplier: 1,
+            constant: 120)
+        
+        let leftLegWidth = NSLayoutConstraint(
+            item: leftLeg,
+            attribute: NSLayoutAttribute.Width,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: body,
+            attribute: NSLayoutAttribute.Width,
+            multiplier: 1,
+            constant: 0)
+        
+        let leftLegBottom = NSLayoutConstraint(
+            item: leftLeg,
+            attribute: NSLayoutAttribute.Bottom,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self.view,
+            attribute: NSLayoutAttribute.Bottom,
+            multiplier: 1,
+            constant: 0)
+        
+        //trailing is in relation to the right side
+        //leading is in relation to the left side
+        
+        let leftLegTrailing = NSLayoutConstraint(
+            item: leftLeg,
+            attribute: NSLayoutAttribute.Trailing,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: body,
             attribute: NSLayoutAttribute.Leading,
             multiplier: 1,
-            constant: 20)
+            constant: 0)
         
-        self.view.addConstraints([rightArmHeight, rightArmLeading, rightArmTrailing, rightArmVerticalPosition])
+        self.view.addConstraints([leftArmHeight, leftLegBottom, leftLegWidth, leftLegTrailing])
+        
+        var rightLeg = UIView()
+        rightLeg.backgroundColor = UIColor.blackColor()
+        self.view.addSubview(rightLeg)
+        
+        rightLeg.setTranslatesAutoresizingMaskIntoConstraints(false)
+        
+        let rightLegHeight = NSLayoutConstraint(
+            item: rightLeg,
+            attribute: NSLayoutAttribute.Height,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: nil,
+            attribute: NSLayoutAttribute.Height,
+            multiplier: 1,
+            constant: 120)
+        
+        let rightLegWidth = NSLayoutConstraint(
+            item: rightLeg,
+            attribute: NSLayoutAttribute.Width,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: body,
+            attribute: NSLayoutAttribute.Width,
+            multiplier: 1,
+            constant: 0)
+        
+        let rightLegBottom = NSLayoutConstraint(
+            item: rightLeg,
+            attribute: NSLayoutAttribute.Bottom,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: self.view,
+            attribute: NSLayoutAttribute.Bottom,
+            multiplier: 1,
+            constant: 0)
+        
+        //trailing is in relation to the right side
+        //leading is in relation to the left side
+        
+        let rightLegLeading = NSLayoutConstraint(
+            item: rightLeg,
+            attribute: NSLayoutAttribute.Leading,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: body,
+            attribute: NSLayoutAttribute.Trailing,
+            multiplier: 1,
+            constant: 0)
+        
+        self.view.addConstraints([rightLegBottom, rightLegHeight, rightLegLeading, rightLegWidth])
+        
+        let bodyBottomPosition = NSLayoutConstraint(
+            item: body,
+            attribute: NSLayoutAttribute.Bottom,
+            relatedBy: NSLayoutRelation.Equal,
+            toItem: leftLeg,
+            attribute: NSLayoutAttribute.Top,
+            multiplier: 1,
+            constant: 0)
+        self.view.addConstraint(bodyBottomPosition)
     }
 
 }
