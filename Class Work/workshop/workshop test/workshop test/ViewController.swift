@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameThatIsPrinted: UILabel!
     
     @IBAction func printNameButton(sender: AnyObject) {
+        let text = String(nameTextField.text)
+        nameThatIsPrinted.text = ("\(text)")
     }
     override func viewDidLoad() {
         super.viewDidLoad()

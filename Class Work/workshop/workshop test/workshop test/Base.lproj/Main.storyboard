@@ -98,7 +98,7 @@
         <!--Second View Controller-->
         <scene sceneID="m8w-zm-Rnb">
             <objects>
-                <viewController id="1eA-5V-KvZ" customClass="SecondViewController" customModule="workshop_test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addVC" id="1eA-5V-KvZ" customClass="SecondViewController" customModule="workshop_test" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6fm-tC-2I3"/>
                         <viewControllerLayoutGuide type="bottom" id="XsV-WT-f9f"/>
@@ -122,12 +122,49 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qpq-pj-871">
                                 <rect key="frame" x="16" y="362" width="365" height="119"/>
                                 <color key="backgroundColor" red="0.50196081399917603" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="21" y="298" width="365" height="119"/>
+                                </variation>
                             </view>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ulv-3Y-nWi">
+                                <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="89" y="471" width="229" height="30"/>
+                                </variation>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ick-xr-JwG">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Add campus">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="157" y="522" width="87" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="YcT-B2-tXw" kind="show" id="bHz-dI-4qj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="ulv-3Y-nWi"/>
+                                <exclude reference="Ick-xr-JwG"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="ulv-3Y-nWi"/>
+                                <include reference="Ick-xr-JwG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
+                        <outlet property="addTextBox" destination="ulv-3Y-nWi" id="L3S-Xf-hv9"/>
                         <outlet property="purpleBox" destination="qpq-pj-871" id="Fac-af-Lvo"/>
+                        <outlet property="yellowBox" destination="e2f-PC-KzN" id="srZ-4s-vLo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QhI-hQ-uLm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -137,31 +174,47 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1785" y="-406"/>
+            <point key="canvasLocation" x="1848" y="-505"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="Kca-K0-yEu">
+        <scene sceneID="Pu7-gw-C11">
             <objects>
-                <viewController id="D2u-Fo-Ie9" sceneMemberID="viewController">
+                <viewController id="YcT-B2-tXw" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fCz-hZ-ZVa"/>
-                        <viewControllerLayoutGuide type="bottom" id="P1G-CW-6ga"/>
+                        <viewControllerLayoutGuide type="top" id="ri2-XV-77a"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q5V-Oc-a1q"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ZDO-CA-koa">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <view key="view" contentMode="scaleToFill" id="mW5-sh-sCQ">
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="iaJ-2K-YZa">
-                                <rect key="frame" x="-88" y="-8" width="600" height="600"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="I62-Yr-IFO">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="28" width="400" height="564"/>
+                                </variation>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="I62-Yr-IFO"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="I62-Yr-IFO"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Add Campus" id="Yaa-nX-3co"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Egz-GV-nuS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iZF-S8-uDr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2440" y="-406"/>
+            <point key="canvasLocation" x="2559" y="-525"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Vkv-1B-OeI">

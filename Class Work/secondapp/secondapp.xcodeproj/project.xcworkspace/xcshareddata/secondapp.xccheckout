@@ -14,11 +14,11 @@
 		<string>github.com:asheren/MOB-DC-01.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>secondapp/secondapp.xcodeproj</string>
+	<string>Class Work/secondapp/secondapp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>10A52EA4FBADB6C746B5260032017E5923CCC696</key>
-		<string>../../..</string>
+		<string>../../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>github.com:asheren/MOB-DC-01.git</string>
