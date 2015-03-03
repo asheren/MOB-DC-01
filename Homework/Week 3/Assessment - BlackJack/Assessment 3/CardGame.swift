@@ -13,12 +13,28 @@ protocol BlackJack {
     var deal: Bool { get set }
     // Require a deal method
     
+    /*
+        --
+            FEEDBACK
+            Functions always need the ()
+        --
+    */
+    
     func firstHand -> Int
     // Require a first hand method
 }
 
 class CardGame: BlackJack {
     var deal: Bool = true
+    
+    /*
+        --
+            FEEDBACK
+            Functions always need the ()
+            Try to structure your code nicer, with an equal ammount of spaces everywhere
+            Use enters to seperate your variables and functions
+        --
+    */
   
    var myPlayer = Player()
     var total = 0
