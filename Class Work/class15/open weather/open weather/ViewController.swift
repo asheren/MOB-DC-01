@@ -17,7 +17,7 @@ class ViewController: UIViewController {
     @IBAction func updateWeather(sender: AnyObject) {
         weatherDescription.text = "Loading..."
         
-        Weather.retrieveWeather { (weather) -> Void in
+        Weather.retrieveWeather(city.text + "," + state.text) { (weather) -> Void in
             self.weatherDescription.text = weather.friendlyWeather
         }
         
@@ -51,8 +51,9 @@ class ViewController: UIViewController {
         
         //runs only after code in weather.swift executes and weather object is created
         
-        Weather.retrieveWeather { (weather) -> Void in
+        Weather.retrieveWeather("washington,dc") { (weather) -> Void in
             self.weatherDescription.text = weather.friendlyWeather
+            println("the temperature is \(weather.fahrenheit)")
         }
     }
 

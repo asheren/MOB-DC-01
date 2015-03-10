@@ -14,7 +14,7 @@ class Weather {
     
     //property to access the description
     var friendlyWeather: NSString?
-    var fahrenheit: NSInteger?
+    var fahrenheit: Float?
     
     init(json: NSDictionary) {
         if let weather = json["weather"] as? NSArray {
@@ -24,11 +24,17 @@ class Weather {
                 }
             }
         }
+        
+        if let main = json["main"] as? NSDictionary {
+            if let temp = main["temp"] as? Float {
+                self.fahrenheit = (temp - 273.15) * 1.8 + 32
+            }
+        }
     }
     
-    class func retrieveWeather(completionHandler: ((Weather) -> Void)) {
+    class func retrieveWeather(userLoc: String, completionHandler: ((Weather) -> Void)) {
 
-        if let url = NSURL(string: "http://api.openweathermap.org/data/2.5/weather?q=washington,dc") {
+        if let url = NSURL(string: "http://api.openweathermap.org/data/2.5/weather?q=\(userLoc)") {
             let task = NSURLSession.sharedSession().dataTaskWithURL(url, completionHandler: { (data, response, error) -> Void in
                 //void in are closures. closures let us run things as other things finish so it's async
                 
