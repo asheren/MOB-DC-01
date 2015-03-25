@@ -31,6 +31,18 @@ class ViewController: UIViewController {
             }
     }
     
+    @IBAction func readWhispers(sender: AnyObject) {
+        var whisperQuery = PFQuery(className: "Whisper")
+        whisperQuery.whereKey("category", equalTo: self.category.text)
+        whisperQuery.findObjectsInBackgroundWithBlock { (whisperObjects: [AnyObject]!, error: NSError!) -> Void in
+            for whisper in whisperObjects {
+                println(whisper["whisper"])
+                if let whisperTitle = whisper["whisper"] {
+                    println(whisperTitle)
+                }
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

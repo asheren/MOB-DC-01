@@ -26,6 +26,7 @@
 		829F4A241AB1043B004AB05D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 829F4A231AB1043B004AB05D /* SystemConfiguration.framework */; };
 		829F4A261AB10445004AB05D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 829F4A251AB10445004AB05D /* libz.dylib */; };
 		829F4A281AB10453004AB05D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 829F4A271AB10453004AB05D /* libsqlite3.dylib */; };
+		829F4A2E1AB1181A004AB05D /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829F4A2D1AB1181A004AB05D /* UserViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		829F4A251AB10445004AB05D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		829F4A271AB10453004AB05D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		829F4A2A1AB10559004AB05D /* whisperer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "whisperer-Bridging-Header.h"; sourceTree = "<group>"; };
+		829F4A2D1AB1181A004AB05D /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +127,7 @@
 				829F49F81AB101E9004AB05D /* LaunchScreen.xib */,
 				829F49ED1AB101E9004AB05D /* Supporting Files */,
 				829F4A2A1AB10559004AB05D /* whisperer-Bridging-Header.h */,
+				829F4A2D1AB1181A004AB05D /* UserViewController.swift */,
 			);
 			path = whisperer;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				829F49F21AB101E9004AB05D /* ViewController.swift in Sources */,
+				829F4A2E1AB1181A004AB05D /* UserViewController.swift in Sources */,
 				829F49F01AB101E9004AB05D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
